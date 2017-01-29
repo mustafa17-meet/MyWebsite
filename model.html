@@ -21,14 +21,12 @@ body {font-family: "Lato", sans-serif}
     <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
   </li>
   <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">Home</a></li>
-  <li class="w3-hide-small"><a href="#tour" class="w3-padding-large">Make a game</a></li>
+  <li class="w3-hide-small"><a href="#make a game" class="w3-padding-large">Make a game</a></li>
   <li class="w3-hide-small"><a href="#make a team" class="w3-padding-large">Make a team</a></li>
-  <li class="w3-hide-small"><a href="#contact" class="w3-padding-large">Results</a></li>
   <li class="w3-hide-small w3-dropdown-hover">
     <a href="javascript:void(0)" class="w3-hover-none w3-padding-large" title="More">More <i class="fa fa-caret-down"></i></a>     
     <div class="w3-dropdown-content w3-white w3-card-4">
-      <a href="#">Profile</a>
-      <a href="#">My team</a>
+      <a href="#my team">My team</a>
       <a href="#log in">Log in</a>
       <a href="#sign up">Sign up</a>
    <li class="w3-hide-small"><a href="#about us" class="w3-padding-large">About us</a></li>
@@ -39,15 +37,18 @@ body {font-family: "Lato", sans-serif}
 </div>
 
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <ul class="w3-navbar w3-left-align w3-black">
-    <li><a class="w3-padding-large" href="#band">BAND</a></li>
-    <li><a class="w3-padding-large" href="#tour">TOUR</a></li>
-    <li><a class="w3-padding-large" href="#contact">CONTACT</a></li>
-    <li><a class="w3-padding-large" href="#">MERCH</a></li>
-  </ul>
-</div>
+  <!-- Make a game Section -->
+  <div class="w3-black" id="make a game">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Make a game</h2>
+      <p class="w3-opacity w3-center"><i>Set your terms!</i></p><br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">When <input type="text" class="form-control"></li>
+        <li class="w3-padding">Where <input type="text" class="form-control"></li>
+        <li class="w3-padding">Age below <input type="number" class="form-control">></li>
+      </ul>
+
 
  
 
@@ -60,8 +61,9 @@ body {font-family: "Lato", sans-serif}
 	padding-left: 100px;
 	color: white;
 }
-
+body{
 	font-family: "Lato", sans-serif;
+}
 
 }
 </style>
@@ -86,6 +88,21 @@ body {font-family: "Lato", sans-serif}
 </div>
 
 </div>
+
+
+
+  <div class="w3-black" id="my team">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    	<table  style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  </tr>
+</table>
+
+
 
 
 
@@ -115,63 +132,36 @@ body{
 		
 		<h3><em><font color="boldblack"></font> <em></h3>
 	</div>
-	<form class="form-inline" role="form" action="{{url_for('sign_up')}}" method="post">
 		<div class="form-group">
 		
-			<input type="text" name='name' class="form-control" placeholder="First Name" >
-		</div>
-		<br>
-		<div class="form-group">
-			
-			<input type="text"  name="sir_name" class="form-control" placeholder="Last Name" >
+			<input type="text" name='name' class="form-control" placeholder="Full Name" >
 		</div>
 		<br>
 
-		<font color="indigo">Male</font> <input type="radio" name="gender" class="form-control" value="male">
-		<font color="indigo">Female</font> <input type="radio" name="gender" class="form-control" value="female">
-		<font color="indigo">Other</font> <input type="radio" name="gender" class="form-control" value="other"><br>	
+		<div class="form-group">
+			<input type="date" name="date_of_birth" placeholder="Your Birthday" class="form-control">
+		</div>
 
 		<br>
 
 		<div class="form-group">
-			<input type="date" name="birth_date" placeholder="Your Birthday" class="form-control">
-		</div>
-
-		<br>
-		<div class="form-group">
-			<input type="text" name="user_name" class="form-control" placeholder="Username" >
+			<input type="text" name="email" class="form-control" placeholder="Email" >
 		</div>
 		<br>
 		<div class="form-group">
-			<input type="password" name="password" class="form-control" placeholder="Password" >
+			<input type="password" name="password_hash" class="form-control" placeholder="Password" >
 		</div>
 		<br>
-	</form>
 
+		<button type="submit" class="btn btn-default">Submit</button>
 </div>
 
 
 
 
 
-  <!-- Make a game Section -->
-  <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">Make a game</h2>
-      <p class="w3-opacity w3-center"><i>Set your terms!</i></p><br>
 
-      <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">When <input type="text" class="form-control"></li>
-        <li class="w3-padding">Where <input type="text" class="form-control"></li>
-        <li class="w3-padding">Age below <input type="number" class="form-control">></li>
-      </ul>
-
-
-
-
-
-
-  <!-- The Contact Section -->
+  <!-- Make A Team Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="make a team">
     <h2 class="w3-wide w3-center">MAKE A TEAM</h2>
     <p class="w3-opacity w3-center"><i>First steps are always the easiest!</i></p>
@@ -191,11 +181,11 @@ body{
 <!-- End Page Content -->
 </div>
 
-  <!-- The Band Section -->
+  <!-- About Us Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about us">
     <h2 class="w3-wide">About us</h2>
     <p class="w3-opacity"><i>Want to test your football skills?</i></p>
-    <p class="w3-justify">We have created a fictional band website. that enables teams of finding opponents and challenge them in the real life</p>
+    <p class="w3-justify">We have created a website, that enables teams of finding opponents and challenge them in the real life</p>
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
         <p></p>

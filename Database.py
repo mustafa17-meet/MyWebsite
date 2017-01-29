@@ -1,4 +1,4 @@
-from sqlalchemy import Table, Column, String, Integer, Boolean, ForeignKey, create_engine
+from sqlalchemy import Table, Column, String, Integer, Boolean, ForeignKey, create_engine, Date
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from passlib.apps import custom_app_context as pwd_context
