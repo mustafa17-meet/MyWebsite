@@ -1,0 +1,54 @@
+<html>
+<title>
+Log in
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="log in">
+<style type="text/css">
+.container-fluid{
+	padding-top: 70px;
+	padding-right: 100px;
+	padding-left: 100px;
+	color: white;
+}
+body{
+	font-family: "Lato", sans-serif;
+}
+
+}
+</style>
+<body>
+<div class="container-fluid text-center">
+<div class="page-header">
+	<font size="24" color="red">Log in</font>
+</div>
+<div class="container text-center">
+
+<form class="form-inline" role="form" action="{{url_for('login')}}" method="post">
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="Username" name="username" required="required">
+	<br><br>
+		<input type="password" placeholder="Password" required="required" class="form-control" name="password">
+	<br>
+<br>
+	<button type="submit" class="btn btn-default">Submit</button>
+	</div>
+</form>
+
+</div>
+
+</div>
+
+</body>
+</body>
+</html>
