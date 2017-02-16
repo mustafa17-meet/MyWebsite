@@ -67,6 +67,10 @@ def make_a_game():
     else:
         return render_template('make_a_game.html')
 
+@app.route('/about_us')
+def about_us():
+	return render_template('about_us.html')
+
 
 @app.route('/sign_up', methods = ['GET','POST'])
 def sign_up():
