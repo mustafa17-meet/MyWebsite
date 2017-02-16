@@ -13,7 +13,33 @@ body {font-family: "Lato", sans-serif}
 </style>
 <body>
 
-<body class="asdf">
+<div class = 'flash'>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+
+<form action="{{ url_for('sign_up') }}" method = 'post'>
+  Name:<br>
+  <input type="text" name="name"><br>
+  Email Address:<br>
+  <input type="text" name="email"><br>
+  Date Of Birth:<br>
+  <input type="date" name="date_of_birth"><br>
+  Password:<br>
+  <input type="password" name="password">
+   <input type="submit" value="Create Account">
+</form>
+
+<!--body class="asdf"->
 <div class="container-fluid text-center">
 
 	<div class="page-header">
@@ -45,7 +71,7 @@ body {font-family: "Lato", sans-serif}
 		<br>
 
 		<button type="submit" class="btn btn-default">Submit</button>
-</div>
+</div-->
 
 </body>
 </body>

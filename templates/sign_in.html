@@ -1,6 +1,6 @@
 <html>
 <title>
-Log in
+Sign in
 </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@ body {font-family: "Lato", sans-serif}
 </style>
 <body>
 
-<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="log in">
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="sign_in">
 <style type="text/css">
 .container-fluid{
 	padding-top: 70px;
@@ -28,13 +28,28 @@ body{
 }
 </style>
 <body>
+
+<div class = 'flash'>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+
 <div class="container-fluid text-center">
 <div class="page-header">
 	<font size="24" color="red">Log in</font>
 </div>
 <div class="container text-center">
 
-<form class="form-inline" role="form" action="{{url_for('login')}}" method="post">
+<form class="form-inline" role="form" action="{{url_for('sign_in')}}" method="POST">
 	<div class="form-group">
 		<input type="text" class="form-control" placeholder="Username" name="username" required="required">
 	<br><br>
@@ -44,6 +59,8 @@ body{
 	<button type="submit" class="btn btn-default">Submit</button>
 	</div>
 </form>
+
+<a href="{{ url_for('sign_up') }}" style="color: black;">Sign Up</a>
 
 </div>
 

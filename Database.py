@@ -15,11 +15,8 @@ class User(Base):
     team_id = Column(Integer, ForeignKey('team.id'))
     password_hash = Column(String(255))
     date_of_birth = Column(String)
-
-
     def hash_password(self, password):
         self.password_hash = pwd_context.encrypt(password)
-
     def verify_password(self, password):
         return pwd_context.verify(password, self.password_hash)
 
@@ -38,6 +35,8 @@ class Match(Base):
     time = Column(String)
     location = Column(String)
     score = Column(String)
+    age_below = Column(Integer)
+    phone_number = Column(Integer)
     game_complete = Column(Boolean)
     team1_id = Column(Integer, ForeignKey("team.id"))
     team2_id = Column(Integer, ForeignKey("team.id"))
